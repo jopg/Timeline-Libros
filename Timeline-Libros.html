@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Timeline</title>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+      <link
+         href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext"
+         rel="stylesheet"
+         type="text/css"
+      />
+      <style type="text/css">
+         * {
+            padding: 0;
+            margin: 0;
+            font-family: "Lato";
+         }
+
+         body {
+            background-color: #25303b;
+            position: relative;
+         }
+
+         .titulo {
+            padding: 15px 0;
+            width: 95vw;
+            height: 100px;
+            border-radius: 50px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            color: white;
+            background-color: #3f51b5;
+            margin: 20px 0;
+            text-align: center;
+            box-sizing: border-box;
+            font-size: 2.5em;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-weight: 100;
+         }
+
+         .titulo div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 65vw;
+            font-weight: 700;
+            margin-right: 0.2em;
+         }
+
+         .titulo div span {
+            text-decoration: underline;
+         }
+
+         div[class^="cont"] {
+            width: 65vw;
+            background-color: #eee;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            position: relative;
+            min-height: 100px;
+         }
+
+         p {
+            text-align: justify;
+            text-indent: 1em;
+            padding: 20px;
+         }
+
+         div[class^="d-titulo"] {
+            padding: 10px 0;
+            text-align: center;
+            border-top-right-radius: 15px;
+            color: white;
+            font-weight: 600;
+         }
+
+         div.fecha {
+            height: 100%;
+
+            position: absolute;
+            top: 0;
+            margin-left: 70vw;
+
+            display: flex;
+            align-items: center;
+         }
+
+         div.fecha span {
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+            font-weight: 500;
+            font-size: 0.8em;
+         }
+
+         div.d-titulo1,
+         .cont1 span {
+            background-color: #e74c3c;
+         }
+         div.d-titulo2,
+         .cont2 span {
+            background-color: #2ecc71;
+         }
+         div.d-titulo3,
+         .cont3 span {
+            background-color: #e67e22;
+         }
+         div.d-titulo4,
+         .cont4 span {
+            background-color: #1abc9c;
+         }
+         div.d-titulo5,
+         .cont5 span {
+            background-color: #9b59b6;
+         }
+
+         /*APUNTADOR CON AVATAR       *               *             *                 */
+
+         div.indicador {
+            background-color: #303e8b;
+            width: 30vw;
+            height: 100px;
+            position: fixed;
+            right: 0;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 10px;
+            box-sizing: border-box;
+
+            z-index: 2;
+
+            transition: all 0.5s;
+         }
+
+         div.indicador:hover {
+            opacity: 0;
+         }
+
+         img {
+            height: 100%;
+            border-radius: 50%;
+         }
+
+         .linea {
+            position: absolute;
+            width: 30vw;
+            height: 100%;
+            right: 0;
+            z-index: -1;
+            padding-top: 120px;
+            padding-left: 10px;
+            box-sizing: border-box;
+         }
+
+         .linea div {
+            width: 80px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+         }
+
+         .linea div div {
+            width: 0;
+            height: 100%;
+            border-left: white solid 5px;
+            border-radius: 2.5px;
+            box-sizing: border-box;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="indicador">
+         <img src="foto_ejemplo.png" alt="Jose_imagen" />
+      </div>
+      <div class="linea">
+         <div>
+            <div></div>
+         </div>
+      </div>
+      <div class="titulo">
+         <div>&#x1f4da;<span> Libros Leídos</span></div>
+      </div>
+      <div class="cont1">
+         <div class="d-titulo1">El Hombre más Rico de Babilonia</div>
+         <p>
+            Es una obra clásica de finanzas personales que, a través de relatos
+            ambientados en la antigua Babilonia, nos transmite principios
+            atemporales sobre la riqueza y la prosperidad. George S. Clason, su
+            autor, utiliza parábolas sencillas y personajes entrañables para
+            ilustrar conceptos financieros complejos, haciendo que su lectura
+            sea tanto educativa como entretenida.
+         </p>
+         <div class="fecha"><span>17/04/2020</span></div>
+      </div>
+      <div class="cont2">
+         <div class="d-titulo2">El Inversor Inteligente</div>
+         <p>
+            Es una biblia para aquellos que buscan invertir en el mercado de
+            valores de manera racional y a largo plazo. Benjamin Graham,
+            considerado el padre del value investing, comparte en este libro su
+            vasta experiencia y conocimientos para guiar a los inversores a
+            tomar decisiones más informadas y reducir riesgos.
+         </p>
+         <div class="fecha"><span>23/06/2020</span></div>
+      </div>
+      <div class="cont3">
+         <div class="d-titulo3">El Alquimista</div>
+         <p>
+            Este libro es una novela que ha cautivado a millones de lectores en
+            todo el mundo, transportándonos a un viaje espiritual y personal en
+            busca de nuestros sueños más profundos. La historia gira en torno a
+            Santiago, un joven pastor andaluz que siente una insatisfacción
+            creciente con su vida cotidiana.
+         </p>
+         <div class="fecha"><span>28/01/2022</span></div>
+      </div>
+      <div class="cont4">
+         <div class="d-titulo4">La Magia del Orden</div>
+         <p>
+            "La magia del orden" es un fenómeno literario que ha revolucionado
+            la forma en que concebimos la organización de nuestros espacios.
+            Marie Kondo, la experta japonesa en orden, nos presenta un método
+            único y efectivo para transformar nuestros hogares y, por extensión,
+            nuestras vidas.
+         </p>
+         <div class="fecha"><span>03/05/2023</span></div>
+      </div>
+      <div class="cont5">
+         <div class="d-titulo5">Hábitos Atómicos</div>
+         <p>
+            El libro sirve como guía práctica y transformadora que nos enseña
+            cómo construir buenos hábitos y eliminar los malos de manera gradual
+            y sostenible. James Clear, el autor, nos revela que los grandes
+            cambios en nuestra vida son el resultado de pequeños hábitos que se
+            acumulan con el tiempo.
+         </p>
+         <div class="fecha"><span>01/07/2024</span></div>
+      </div>
+   </body>
+</html>
